@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CITRUS - AI 4Jobs</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <nav style="background-color: #C7FBF4;">
+      <div class="wrapper">
+        <div class="logo"><a href=''>CITRUS </a></div>
+        <sub style="color: #ffa451; font-size: 20px; font-family: comic sans ms;">jeruk kinkan</sub>
+        <div class="menu">
+          <ul>
+            <li><a href="#informasi">Informasi</a></li>
+            <li><a href="#aplikasi">Aplikasi</a></li>
+            <li><a href="#camera">Camera</a></li>
+            <li><a href="#anggota">Anggota Kelompok</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="wrapper">
+      <!-- untuk home -->
+      <section id="informasi">
+        <div class="kolom"><br><br><br>
+          <h2>
+            Orange Counting and Inspection Quality
+            <sub style="color: #ffa451; font-size: 20px; font-family: comic sans ms;">special fruit</sub>
+          </h2>
+          <p>
+            Aplikasi penghitung buah jeruk jenis kinkan pada pohonnya adalah
+            sebuah solusi inovatif yang memanfaatkan teknologi untuk
+            mengoptimalkan pengelolaan pertanian. Aplikasi ini tidak hanya
+            membantu menghitung secara akurat jumlah buah jeruk kinkan yang
+            tumbuh di pohon, tetapi juga mampu memprediksi tingkat kematangan
+            buah, memberikan informasi yang berharga kepada petani dan pengelola
+            kebun jeruk.
+          </p>
+          <img src="{{ url_for('static', filename='img/check.svg') }}" alt="Gambar">
+          Fruit Counting
+          <img src="{{ url_for('static', filename='img/check.svg') }}" alt="Gambar">
+          Inspection Quality
+        </div>
+        <img src="{{ url_for('static', filename='img/pohon kinkan.png') }}" alt="Gambar" style="height: 400px" />
+      </section>
+
+      <!-- untuk courses -->
+      <section id="aplikasi">
+        <img src="{{ url_for('static', filename='img/kinkan.png') }}" alt="Gambar" style="height: 300px" />
+        <div class="kolom">
+          <h2>Akurasi Deteksi Buah Yang Sangat Tinggi</h2>
+          <p>
+            Sistem kami menggunakan kecerdasan buatan dan pembelajaran mesin
+            untuk mendeteksi buah yang terlihat, memperkirakan buah yang
+            tersembunyi pada pohon, serta mengintegrasikan berbagai sumber
+            informasi untuk memberi tahu anda mana buah kinkan yang sudah matang, setengah matang dan mana yang
+            sudah yang busuk.
+          </p>
+        </div>
+      </section>
+      <!-- untuk camera -->
+      <section id="camera">
+        <div class="tengah">
+          <div class="kolom">
+            <h2>Camera</h2>
+            <p>
+              Klik start untuk menampilkan webcame, klik stop untuk menutup webcame, klik capture untuk memotret, klik delete untuk menghapus foto dan klik submit untuk mengidentifikasi foto.
+            </p>
+          </div>
+          <div id="video-container">
+            <video id="webcam" autoplay playsinline></video>
+          </div>
+          <div>
+            <button id="startButton">Start</button>
+            <button id="stopButton" disabled>Stop</button>
+            <button id="captureButton" disabled>Capture</button>
+          </div>
+          <div id="image-container" style="display: none;">
+            <img id="capturedImage" alt="Captured Image">
+          </div>
+          <div>
+            <button id="deleteButton" disabled>Delete</button>
+            <button id="submitButton" disabled>Submit</button>
+          </div>
+          <script src="{{ url_for('static', filename='script.js') }}"></script>
+        </div>
+      </section>
+
+      <!-- Form Input Data -->
+      <section id="inputData">
+        <div class="tengah">
+          <div class="kolom">
+            <h2>Masukan Gambar</h2>
+            <input type="file" id="gambar" name="gambar" accept="img/*" required>
+            <canvas></canvas>
+            <pre id="json"></pre>
+          </div>
+        </div>
+      </section>
+      <!-- Include the script tag for your JavaScript -->
+      <script src="{{ url_for('static', filename='detec.js') }}"></script>
+
+
+      <!-- tabel counting -->
+      <section id="counting">
+        <div class="tengah">
+          <div class="kolom">
+            <h2>Tabel Counting</h2>
+            <p>
+              Refresh Web Untuk Menampilkan Hasil Counting
+            </p>
+            <table border="6" class="table">
+              <thead>
+                <tr bgcolor=lightgrey>
+                  <th>Tanggal</th>
+                  <th>Waktu</th>
+                  <th>Jumlah</th>
+                  <th>Kualitas</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in citrus %}
+                <tr>
+                  <td>{{ row.0 }}</td>
+                  <td>{{ row.1 }}</td>
+                  <td>{{ row.2 }}</td>
+                  <td>{{ row.3 }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- untuk team -->
+        <section id="anggota">
+          <div class="tengah">
+            <div class="kolom">
+              <h2>Our Team Projects AI</h2>
+              <p>
+                Studi Independent Bersertifikat Batch 5 Orbit Future Academy
+              </p>
+              <div class="team-list">
+                <div class="kartu-team">
+                  <img src="{{ url_for('static', filename='img/syahrul.png') }}" alt="Gambar">
+                  <p>Syahrul Gunadin</p>(Master Of Leadership)<br><br><br>
+                </div>
+              </div>
+              <div class="team-list">
+                <div class="kartu-team">
+                  <img src="{{ url_for('static', filename='img/inna.png') }}" alt="Gambar">
+                  <p>Inna Fatahna</p>(Graphical Designer)
+                </div>
+                <div class="kartu-team">
+                  <img src="{{ url_for('static', filename='img/rala.png') }}" alt="Gambar">
+                  <p>Ralla Lembayung</p>(Deployment - Inferencing)
+                </div>
+                <div class="kartu-team">
+                  <img src="{{ url_for('static', filename='img/vioneta.png') }}" alt="Gambar">
+                  <p>Vioneta Zarazsofia</p>(Web Apps Developer)
+                </div>
+                <div class="kartu-team">
+                  <img src="{{ url_for('static', filename='img/yunisa.png') }}" alt="Gambar">
+                  <p>Yunisa Damayanti</p>(Modeling - Training)
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer>
+          <div class="footer-content">
+            <span>&copy; Kelompok 6_ERSOY</span>
+          </div>
+        </footer>
+      </div>
+    </body>
+  </html>
