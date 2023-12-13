@@ -1,0 +1,405 @@
+* {
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "raleway";
+  font-weight: bold;
+}
+
+.wrapper {
+  width: 1100px;
+  margin: auto;
+  position: relative;
+}
+
+.logo a {
+  font-size: 60px;
+  font-weight: 800;
+  float: left;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #1f4590;
+}
+
+.menu {
+  float: right;
+}
+
+nav {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  line-height: 80px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 1;
+  border-bottom: 1px solid #364f6b;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 0px 16px 0px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin: auto;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.kolom {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-family: system-ui;
+  font-weight: 800;
+  font-size: 55px;
+  margin-bottom: 20px;
+  color: #1f4590;
+  width: 100%;
+  line-height: 50px;
+}
+
+.img-check {
+  width: 16.67px;
+  height: 16.67px;
+  float: left;
+  margin-right: 15px;
+}
+
+dt {
+  float: left;
+  color: #535353;
+  font-size: 15px;
+  font-family: Raleway;
+  font-weight: 700;
+  margin-right: 15px;
+}
+
+p {
+  margin: 10px 0px 10px 0px;
+  padding: 10px 0px 10px 0px;
+  color: rgba(74, 74, 74, 0.7);
+  font-family: system-ui;
+}
+#startButton {
+  background-color: blue;
+  color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 15px 20px 15px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#stopButton {
+  background-color: red;
+  color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 15px 20px 15px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#captureButton {
+  background-color: rgb(9, 223, 63);
+  color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 15px 20px 15px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#deleteButton {
+  background-color: rgb(87, 2, 84);
+  color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 15px 20px 15px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#submitButton {
+  background-color: green;
+  color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 15px 20px 15px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#capture-button-container {
+  text-align: center;
+}
+
+/* Input Data Styles */
+textarea {
+  width: calc(100% - 22px); /* Account for padding and border */
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button Styles */
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Canvas Styles */
+canvas {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+  height: 500px;
+}
+
+/* Container Styles (Optional) */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+video {
+  width: 100%;
+  max-width: 640px;
+}
+
+.tengah {
+  text-align: center;
+  width: 100%;
+}
+
+.team-list {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.kartu-team {
+  width: 20%;
+  margin: 0 auto;
+}
+/* Style for the form input */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #008e40;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+/* Style the table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  form {
+    width: 80%;
+  }
+}
+.kartu-team img {
+  width: 80%;
+  border-radius: 50%;
+}
+
+.kartu-team p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  color: blue;
+}
+
+.table {
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+caption {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #6c757d;
+  text-align: left;
+}
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: #212529;
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --bs-table-active-color: #212529;
+  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+  --bs-table-hover-color: #212529;
+  --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  vertical-align: top;
+  border-color: #dee2e6;
+}
+.table > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem;
+  background-color: var(--bs-table-bg);
+  border-bottom-width: 1px;
+  box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+.table > tbody {
+  vertical-align: inherit;
+}
+.table > thead {
+  vertical-align: bottom;
+}
+.table > :not(:last-child) > :last-child > * {
+  border-bottom-color: currentColor;
+}
+
+footer {
+  background-color: #1f4590;
+  color: #fff;
+  padding: 10px 0;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 991.98px) {
+  .wrapper {
+    width: 90%;
+  }
+
+  .logo a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav .menu {
+    width: 100%;
+    margin: 0;
+  }
+
+  nav .menu ul {
+    text-align: center;
+    margin: auto;
+    line-height: 60px;
+  }
+
+  nav .menu ul li {
+    display: inline-block;
+    float: none;
+  }
+
+  section {
+    display: block;
+  }
+
+  section img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .kartu-team {
+    width: 50%;
+  }
+}
